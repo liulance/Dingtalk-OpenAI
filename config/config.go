@@ -19,7 +19,7 @@ type Configuration struct {
 	// 日志级别，info或者debug
 	LogLevel string `yaml:"log_level"`
 	// gpt apikey
-	ApiKey string `yaml:"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"`
+	ApiKey string `yaml:"api_key"`
 	// 请求的 URL 地址
 	BaseURL string `yaml:"base_url"`
 	// 使用模型
@@ -35,7 +35,7 @@ type Configuration struct {
 	// 指定服务启动端口，默认为 8090
 	Port string `yaml:"port"`
 	// 指定服务的地址，就是钉钉机器人配置的回调地址，比如: http://chat.eryajf.net
-	ServiceURL string `yaml:"https://dingtalk-openai.onrender.com"`
+	ServiceURL string `yaml:"service_url"`
 	// 限定对话类型 0：不限 1：单聊 2：群聊
 	ChatType string `yaml:"chat_type"`
 	// 哪些群组可以进行对话
@@ -52,7 +52,7 @@ type Configuration struct {
 	AdminUsers []string `yaml:"admin_users"`
 	// 钉钉机器人在应用信息中的AppSecret，为了校验回调的请求是否合法，如果你的服务对接给多个机器人，这里可以配置多个机器人的secret
 	AppSecrets []string `yaml:"app_secrets"`
-	// 敏感词，提问时触发，则不允许提问，回答的内容中触发，则以 *** 代替
+	// 敏感词，提问时触发，则不允许提问，回答的内容中触发，则以 🚫 代替
 	SensitiveWords []string `yaml:"sensitive_words"`
 	// 自定义帮助信息
 	Help string `yaml:"help"`
